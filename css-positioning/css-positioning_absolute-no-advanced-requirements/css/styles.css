@@ -36,29 +36,46 @@ main {
 */
 
 .box--top-left {
+  position: absolute;
   background-color: #aed6f1;
 }
 
 .box--top-center {
+  position: absolute;
+  right: 210px;
   background-color: #85c1e9;
 }
 
 .box--top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
   background-color: #5dade2;
 }
 
 .box--center {
+  position: absolute;
+  top: 260px;
+  right: 210px;
   background-color: #3498db;
 }
 
 .box--bottom-left {
+  position: absolute;
+  bottom: 0;
   background-color: #2874a6;
 }
 
 .box--bottom-center {
+  position: absolute;
+  bottom: 0;
+  right: 210px;
   background-color: #21618c;
 }
 
 .box--bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   background-color: #1b4f72;
 }
