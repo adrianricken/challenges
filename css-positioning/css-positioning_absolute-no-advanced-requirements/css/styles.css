@@ -55,8 +55,14 @@ main {
 
 .box--center {
   position: absolute;
+<<<<<<< HEAD
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+=======
   top: 260px;
   right: 210px;
+>>>>>>> a2fcd414380f3819473bcad0a295d2d82dc2cb5b
   background-color: #3498db;
 }
 
@@ -69,7 +75,11 @@ main {
 .box--bottom-center {
   position: absolute;
   bottom: 0;
+<<<<<<< HEAD
+  left: 210px;
+=======
   right: 210px;
+>>>>>>> a2fcd414380f3819473bcad0a295d2d82dc2cb5b
   background-color: #21618c;
 }
 
