@@ -36,29 +36,65 @@ main {
 */
 
 .box--top-left {
+<<<<<<< HEAD
+=======
+  position: absolute;
+>>>>>>> 26d794f36f434aa8b854654ec6d4d4a9ca9a6380
   background-color: #aed6f1;
 }
 
 .box--top-center {
+<<<<<<< HEAD
+=======
+  position: absolute;
+  margin: 0 210px;
+>>>>>>> 26d794f36f434aa8b854654ec6d4d4a9ca9a6380
   background-color: #85c1e9;
 }
 
 .box--top-right {
+<<<<<<< HEAD
+=======
+  position: absolute;
+  margin: 0px 420px;
+>>>>>>> 26d794f36f434aa8b854654ec6d4d4a9ca9a6380
   background-color: #5dade2;
 }
 
 .box--center {
+<<<<<<< HEAD
+=======
+  position: absolute;
+  margin: 260px 210px;
+>>>>>>> 26d794f36f434aa8b854654ec6d4d4a9ca9a6380
   background-color: #3498db;
 }
 
 .box--bottom-left {
+<<<<<<< HEAD
+=======
+  position: absolute;
+  margin: 520px 0;
+>>>>>>> 26d794f36f434aa8b854654ec6d4d4a9ca9a6380
   background-color: #2874a6;
 }
 
 .box--bottom-center {
+<<<<<<< HEAD
+=======
+  position: absolute;
+  margin: 520px 210px;
+>>>>>>> 26d794f36f434aa8b854654ec6d4d4a9ca9a6380
   background-color: #21618c;
 }
 
 .box--bottom-right {
+<<<<<<< HEAD
   background-color: #1b4f72;
 }
+=======
+  position: absolute;
+  margin: 520px 420px;
+  background-color: #1b4f72;
+}
+>>>>>>> 26d794f36f434aa8b854654ec6d4d4a9ca9a6380
