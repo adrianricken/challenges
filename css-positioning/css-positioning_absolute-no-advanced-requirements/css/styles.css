@@ -42,36 +42,41 @@ main {
 
 .box--top-center {
   position: absolute;
-  margin: 0 210px;
+  right: 210px;
   background-color: #85c1e9;
 }
 
 .box--top-right {
   position: absolute;
-  margin: 0px 420px;
+  top: 0;
+  right: 0;
   background-color: #5dade2;
 }
 
 .box--center {
   position: absolute;
-  margin: 260px 210px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #3498db;
 }
 
 .box--bottom-left {
   position: absolute;
-  margin: 520px 0;
+  bottom: 0;
   background-color: #2874a6;
 }
 
 .box--bottom-center {
   position: absolute;
-  margin: 520px 210px;
+  bottom: 0;
+  left: 210px;
   background-color: #21618c;
 }
 
 .box--bottom-right {
   position: absolute;
-  margin: 520px 420px;
+  bottom: 0;
+  right: 0;
   background-color: #1b4f72;
 }
