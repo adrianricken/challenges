@@ -100,7 +100,7 @@ h1 {
     width: 200px;
   }
   .box--five {
-    content: url("./img/cat_medium.jpg");
+    content: url("../img/cat_medium.jpg");
   }
 }
 
@@ -109,7 +109,7 @@ h1 {
     width: 400px;
   }
   .box--five {
-    content: url("./img/cat_large.jpg");
+    content: url("../img/cat_large.jpg");
   }
 }
 
