@@ -99,11 +99,17 @@ h1 {
   .box--two {
     width: 200px;
   }
+  .box--five {
+    content: url("./img/cat_medium.jpg");
+  }
 }
 
 @media (min-width: 1200px) {
   .box--two {
     width: 400px;
+  }
+  .box--five {
+    content: url("./img/cat_large.jpg");
   }
 }
 
