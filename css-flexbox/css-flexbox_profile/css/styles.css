@@ -24,6 +24,11 @@ body {
   max-width: 1200px;
 }
 
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
 .main__title {
   padding: 10px;
   background: var(--primary);
@@ -34,16 +39,15 @@ body {
   border-radius: 50%;
   max-width: 50%;
   height: auto;
-}
-
-.profile_image-center {
-  display: flex;
-  justify-content: center;
+  align-self: center;
 }
 
 .tech-stack__list {
   list-style: none;
   padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .tech-stack__list-item {
