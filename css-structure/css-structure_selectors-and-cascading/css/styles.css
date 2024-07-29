@@ -88,7 +88,8 @@ footer a {
 }
 
 /* 7. These styles should apply to all paragraphs and all lists (please use a class selector) */
-.text {
+.text,
+.list {
   outline: 2px dashed red;
   color: #2c3f3f;
 }
@@ -108,7 +109,7 @@ footer a {
 }
 
 /* 10. These styles should apply to the paragraph in the footer */
-footer p {
+footer {
   outline: 2px dashed red;
   color: #ffffff;
 }
