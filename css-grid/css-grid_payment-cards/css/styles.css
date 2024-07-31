@@ -43,6 +43,7 @@ body {
   /* Add styles to the container */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  /* better: repeat(3, 1fr); */
   gap: 20px;
 }
 
