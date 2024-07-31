@@ -44,6 +44,7 @@ body {
   /* Add styles to the grid container */
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* alternativ: 50% 50% */
 }
 
 .teaser-grid__teaser {
