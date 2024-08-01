@@ -33,7 +33,6 @@ Hint: you need only three lines of code in your grid container
 
 body {
   font-family: system-ui;
-
   background-color: var(--grey-dark);
 }
 
@@ -41,8 +40,11 @@ body {
   margin: 0 auto;
   padding: 2rem;
   max-width: 50rem;
-
   /* Add styles to the container */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* better: repeat(3, 1fr); */
+  gap: 20px;
 }
 
 .cards__option {
