@@ -6,8 +6,7 @@
   the park should be pale yellow box with a dashed border.
 */
 
-*,
-*::before,
+* *::before,
 *::after {
   box-sizing: border-box;
 }
@@ -17,17 +16,38 @@
   border: 2px dashed silver;
   overflow: hidden;
   border-radius: 8px;
-  background-color: lightgoldenrodyellow;
+  background-color: yellow;
 }
 
 .animal {
   padding: 16px;
+  font-size: 32px;
 
   /*
     The animals are very small.
     The size of the emojis is controlled via the font size.
     Set the font size to 32px.
   */
+}
+
+.giraffe {
+  text-align: center;
+}
+
+.dino {
+  text-align: right;
+}
+
+.crocodile:hover {
+  background-color: lightblue;
+}
+
+.giraffe:hover {
+  background-color: lightgreen;
+}
+
+.dino:hover {
+  background-color: lightsalmon;
 }
 
 /*
