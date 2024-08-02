@@ -55,8 +55,6 @@ Update the first operand
 Please don't forget to think about the declaration of the variable "operand1".
 */
 
-operand1 = 7;
-
 const increaseByOneButton = document.querySelector(
   '[data-js="increase-by-one"]'
 );
