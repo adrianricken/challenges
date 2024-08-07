@@ -20,21 +20,22 @@
         <fieldset aria-labelledby="description">
           <legend>Enter your information</legend>
 
-          <label aria-describedby="name-input" for="name-input">Name:</label>
-          <input id="name-Input" type="text" name="name-input" />
+          <label for="name-input">Name:</label>
+          <input id="name-Input" type="text" name="name" />
 
-          <label aria-describedby="age-input" for="age-input">Age:</label>
-          <input id="age-Input" type="text" name="age-input" />
+          <label for="age-input">Age:</label>
+          <input id="age-Input" type="text" name="age" />
 
-          <label aria-describedby="color-input" for="color-input"
-            >Color you cannot see:</label
-          >
-          <input id="color-Input" type="color" name="color-input" />
+          <label for="color-input">Color you cannot see:</label>
+          <input id="color-Input" type="color" name="color" />
 
-          <label aria-describedby="personal-message" for="personal-message"
-            >Leave us a message:</label
-          >
-          <textarea rows="7" type="text" id="personal-message"></textarea>
+          <label for="personal-message">Leave us a message:</label>
+          <textarea
+            id="personal-message"
+            name="personal-message"
+            rows="7"
+            type="text"
+          ></textarea>
 
           <button type="submit">Submit</button>
         </fieldset>
