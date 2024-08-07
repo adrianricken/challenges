@@ -30,6 +30,7 @@ lowercaseButton.addEventListener("click", () => {
 });
 
 switchButton.addEventListener("click", () => {
+  e.preventDefault();
   let temp;
   temp = firstInput.value;
   firstInput.value = secondInput.value;
