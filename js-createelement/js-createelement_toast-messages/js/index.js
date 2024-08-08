@@ -11,9 +11,7 @@ addButton.addEventListener("click", (event) => {
   newMessage.classList.add("toast-container__message");
   newMessage.textContent = "I'm a toast message.";
 
-  toastContainer.append(newMessage);
-
-  return newMessage;
+  toastContainer.appendChild(newMessage);
 });
 
 clearButton.addEventListener("click", () => {
