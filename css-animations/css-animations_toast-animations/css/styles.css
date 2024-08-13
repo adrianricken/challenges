@@ -16,18 +16,23 @@ body {
 .start-button {
   padding: 1rem 2rem;
   background: #e5430f;
-  color: #e4e8f0;
+  color: #000000;
   border-radius: 14px;
-  border: none;
+  border: 4px dotted black;
+  position: absolute;
   font-size: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: border-color 1s ease-in-out 1.5s, color 2s ease-in-out,
+    background-color 1s ease-in-out, box-shadow 2s ease-in-out;
+  animation: moveInCircle 5s linear infinite;
 }
 
 .start-button:hover {
-  background-color: #f5521c;
+  background-color: #6e92c9;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border: 4px dotted white;
 }
 
 .start-button:disabled {
@@ -49,8 +54,6 @@ body {
   background: rgb(71, 212, 94);
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-
-  transition: transform 0.5s;
 }
 
 .toast--hidden {
@@ -75,4 +78,13 @@ body {
   opacity: 0.8;
   width: 0%;
   transition: width linear 2000ms;
+}
+
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg) translateX(25px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(25px) rotate(-360deg);
+  }
 }
