@@ -57,7 +57,7 @@ console.log("allCardsWith3Tags", allCardsWith3Tags);
 // ---------------------------------------------------------------------
 
 const allCardsThatAreNotBookmarked = cards.filter(
-  (card) => card.isBookmarked === false
+  (card) => !card.isBookmarked === true
 );
 console.log("allCardsThatAreNotBookmarked", allCardsThatAreNotBookmarked);
 
