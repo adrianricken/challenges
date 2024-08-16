@@ -27,7 +27,7 @@ startRaceButton.addEventListener("click", async () => {
 
   await animateRunner(runner1);
   await animateRunner(runner2);
-  await animateRunner(runner3);
+  animateRunner(runner3);
 
   // --^-- write your code here --^--
 
