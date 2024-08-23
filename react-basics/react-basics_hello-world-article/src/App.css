@@ -22,7 +22,6 @@
 body {
   margin: 0;
   font-family: system-ui;
-
 }
 
 article {
@@ -41,5 +40,5 @@ h1 {
 }
 
 p {
-  color: var(--black);
+  color: var(--accent);
 }
