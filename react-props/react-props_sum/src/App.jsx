@@ -1,13 +1,13 @@
 import "./App.css";
 
 export default function App() {
-  return <Sum valueA={13} valueB={23} />;
+  return <Sum valueA={1} valueB={2} />;
 }
 
 function Sum({ valueA, valueB }) {
   return (
-    <div>
+    <h1>
       {valueA} + {valueB} = {valueA + valueB}
-    </div>
+    </h1>
   );
 }

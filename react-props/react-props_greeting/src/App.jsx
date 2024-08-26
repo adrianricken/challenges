@@ -6,5 +6,5 @@ export default function App() {
 
 function Greeting({ inputName }) {
   const coaches = ["Gimena", "Klaus", "Jan", "Sven"];
-  return <div>Hello, {coaches.includes(inputName) ? "coach" : inputName}!</div>;
+  return <h1>Hello, {coaches.includes(inputName) ? "coach" : inputName}!</h1>;
 }
