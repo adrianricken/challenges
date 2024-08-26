@@ -1,11 +1,7 @@
 import "./App.css";
 
 export default function App() {
-  return (
-    <div>
-      <Sum valueA={13} valueB={23} />
-    </div>
-  );
+  return <Sum valueA={13} valueB={23} />;
 }
 
 function Sum({ valueA, valueB }) {
