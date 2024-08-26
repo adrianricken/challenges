@@ -1,20 +1,29 @@
 import "./App.css";
 
 export default function App() {
+  function handleClick() {
+    console.log("You clicked me!");
+  }
+
   return (
-    <button>
-      <Button color={"blue"} disabled={false} text="I'm a button" />
-    </button>
+    <Button
+      color="red"
+      backgroundColor="blue"
+      disabled={false}
+      text="click me"
+      onClick={handleClick}
+    />
   );
 }
 
-function Button({ color, disabled, text }) {
+function Button({ color, backgroundColor, disabled, text, onClick }) {
   return (
     <button
-      color="color"
-      disabled="disabled"
-      content="text"
-      style={{ height: "100px", width: "50px" }}
-    ></button>
+      style={{ color: color, backgroundColor: backgroundColor }}
+      disabled={disabled}
+      onClick={onClick}
+    >
+      {text}
+    </button>
   );
 }
