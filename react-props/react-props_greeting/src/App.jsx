@@ -1,5 +1,14 @@
 import "./App.css";
 
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  return (
+    <div>
+      <Greeting inputName={"Adrian"} />
+    </div>
+  );
+}
+
+function Greeting({ inputName }) {
+  const coaches = ["Gimena", "Klaus", "Jan", "Sven"];
+  return <div>Hello, {coaches.includes(inputName) ? "coach" : inputName}!</div>;
 }
