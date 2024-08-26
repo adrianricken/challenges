@@ -1,11 +1,7 @@
 import "./App.css";
 
 export default function App() {
-  return (
-    <div>
-      <Smiley isHappy={true} />
-    </div>
-  );
+  return <Smiley isHappy={true} />;
 }
 
 function Smiley({ isHappy }) {
