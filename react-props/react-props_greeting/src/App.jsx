@@ -1,11 +1,7 @@
 import "./App.css";
 
 export default function App() {
-  return (
-    <div>
-      <Greeting inputName={"Adrian"} />
-    </div>
-  );
+  return <Greeting inputName={"Adrian"} />;
 }
 
 function Greeting({ inputName }) {
