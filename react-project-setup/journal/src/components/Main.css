@@ -1,0 +1,13 @@
+@import "./colors.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.newHeading {
+  color: var(--color-granite);
+  font-weight: 500;
+  font-size: small;
+}
