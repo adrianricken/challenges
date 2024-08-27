@@ -18,3 +18,9 @@ export default function App() {
     </main>
   );
 }
+
+// Bonus Task:
+/* the console.log is in the handleClick-function, which turns the state of
+isActive and console.log’s the old/opposite value.
+It is updated in the next call, but then it is updated again, thats why it’s always
+vice vera.*/
