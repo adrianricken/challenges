@@ -13,11 +13,9 @@ export default function App() {
     if (people >= 1) setPeople(people - 1);
   }
 
-  // return UI
   return (
     <div className="container">
       <h1>Place a Table Reservation</h1>
-      {/* render 'Counter' component and pass {updatePeople} function as prop for onCounterChange -> here the updated value is beeing sent by Counter component */}
       <Counter onAdd={handleAdd} onSubtract={handleSubtract} />
       <p>You are going to reserve a table for {people} people.</p>
     </div>
