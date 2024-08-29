@@ -2,6 +2,8 @@ import "./App.css";
 import Form from "./components/Form.jsx";
 
 export default function App() {
+  // function handleCreateUser(name, email) {}
+
   return (
     <div className="container">
       <h1>Personal Details Form</h1>
