@@ -1,21 +1,22 @@
-import { useState } from "react";
 import "./Form.css";
 
-export default function Form() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+// 'onCreateUser' comes from the App component and is being used here as a parameter
+// this function sends the input to the App (parent) component
 
+export default function Form({ onCreateUser }) {
+  // this function is being called when the form is submitted
   function handleSubmit(event) {
+    // event.preventDefault() stops automatically reloading the page
     event.preventDefault();
 
-    const form = event.target;
-    setName(form.elements.name.value);
-    setEmail(form.elements.email.value);
+    // accessing the input form elements
+    const formElements = event.target.elements;
 
+    // sends the values from the input to the 'handleCreateUser' function in the App component
+    onCreateUser(formElements.name.value, formElements.email.value);
+
+    // resets the form after submitting
     event.target.reset();
-
-    // onSubmit={onCreateUser}
-    // onCreateUser()={name, email}
   }
 
   return (
@@ -26,9 +27,9 @@ export default function Form() {
     >
       <h2 id="user-details">Please enter your details here!</h2>
       <label htmlFor="name">Name: </label>
-      <input id="name" name="name" type="text" placeholder="John Doe" />
+      <input id="name" name="name" type="text" placeholder="Your name" />
       <label htmlFor="email">Email: </label>
-      <input id="email" name="email" type="email" placeholder="john@doe.com" />
+      <input id="email" name="email" type="email" placeholder="your@mail.de" />
       <button className="form__submit-button" type="submit">
         Submit
       </button>
