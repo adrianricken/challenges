@@ -4,19 +4,19 @@ import "./Form.css";
 // this function sends the input to the App (parent) component
 
 export default function Form({ onCreateUser }) {
-  // this function is being called when the form is submitted
   function handleSubmit(event) {
-    // event.preventDefault() stops automatically reloading the page
+    // this function is being called when the form is submitted
     event.preventDefault();
+    // event.preventDefault() stops automatically reloading the page
 
-    // accessing the input form elements
     const formElements = event.target.elements;
+    // accessing the input form elements
 
-    // sends the values from the input to the 'handleCreateUser' function in the App component
     onCreateUser(formElements.name.value, formElements.email.value);
+    // sends the values from the input to the 'handleCreateUser' function in the App component
 
-    // resets the form after submitting
     event.target.reset();
+    // resets the form after submitting
   }
 
   return (
