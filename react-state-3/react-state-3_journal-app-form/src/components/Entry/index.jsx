@@ -17,3 +17,9 @@ export default function Entry({ motto, notes, date }) {
     </article>
   );
 }
+
+// function handleAddEntrie(date, motto, notes) {
+//   setDate(date);
+//   setMotto(motto);
+//   setNotes(notes);
+// }
