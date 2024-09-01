@@ -1,14 +1,10 @@
 import "./App.css";
 
 export default function App() {
-  function handleClick() {
-    console.log("You clicked me!");
-  }
-
   return (
     <Button
-      color="red"
-      backgroundColor="blue"
+      color="turquoise"
+      backgroundColor="hotpink"
       disabled={false}
       text="click me"
       onClick={handleClick}
@@ -26,4 +22,8 @@ function Button({ color, backgroundColor, disabled, text, onClick }) {
       {text}
     </button>
   );
+}
+
+function handleClick() {
+  console.log("You clicked me!");
 }
