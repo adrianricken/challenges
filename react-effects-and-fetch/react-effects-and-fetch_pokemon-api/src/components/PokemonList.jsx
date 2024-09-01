@@ -22,6 +22,7 @@ export default function PokemonList() {
       {/* <button type="button" className="button" onClick={loadPokemon}>
         Load Pokémon
       </button> */}
+
       <ul>
         {pokemon.map(({ name }) => (
           <li key={name} className="pokemon">
