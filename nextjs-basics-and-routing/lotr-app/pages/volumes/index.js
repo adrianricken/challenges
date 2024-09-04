@@ -1,5 +1,10 @@
 import Link from "next/link";
 import { introduction } from "../../resources/lib/data";
+import { volumes } from "../../resources/lib/data";
+
+function getRandomElement(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
 
 export default function Volumes() {
   return (
@@ -9,20 +14,15 @@ export default function Volumes() {
       <p>{introduction}</p>
       <h2>All Volumes</h2>
       <ul>
-        <li>
-          <Link href={"/volumes/the-fellowship-of-the-ring"}>
-            The Fellowship of the Ring
-          </Link>
-        </li>
-        <li>
-          <Link href={"/volumes/the-two-towers"}>The Two Towers</Link>
-        </li>
-        <li>
-          <Link href={"/volumes/the-return-of-the-king"}>
-            The Return of the King
-          </Link>
-        </li>
+        {volumes.map(({ slug, title }) => (
+          <li key={slug}>
+            <Link href={`/volumes/${slug}`}>{title}</Link>
+          </li>
+        ))}
       </ul>
+      <button onClick={<Link href={`/volumes`}></Link>}>
+        See random volume
+      </button>
     </>
   );
 }
