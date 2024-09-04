@@ -2,27 +2,28 @@ import Link from "next/link";
 import { volumes } from "../../resources/lib/data";
 import Image from "next/image";
 
-const volume = volumes.find(({ slug }) => slug === "the-return-of-the-king");
+const TheReturnOfTheKing = () => {
+  const { title, description, cover, books } = volumes.find(
+    (volume) => volume.slug === "the-return-of-the-king"
+  );
 
-export default function TheReturnOfTheKing() {
   return (
     <>
       <Link href={"/volumes"}>← All Volumes</Link>
-      <h1>{volume.title}</h1>
-      <p>{volume.description}</p>
+      <h1>{title}</h1>
+      <p>{description}</p>
       <ul>
-        {volume.books.map((book, index) => (
-          <li key={index}>
-            {book.ordinal}: {book.title}
-          </li>
-        ))}
+        {books.map(({ ordinal, title }) => {
+          return (
+            <li key={ordinal}>
+              <p>
+                {ordinal}: {title}
+              </p>
+            </li>
+          );
+        })}
       </ul>
-      <Image
-        src={"/../../resources/images/the-return-of-the-king.png"}
-        alt="the-return-of-the-king-cover"
-        width={140}
-        height={230}
-      />
+      <Image src={cover} alt={title} width={140} height={230} />
       <footer
         style={{
           display: "flex",
@@ -37,4 +38,6 @@ export default function TheReturnOfTheKing() {
       </footer>
     </>
   );
-}
+};
+
+export default TheReturnOfTheKing;
