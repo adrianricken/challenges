@@ -1,0 +1,14 @@
+footer {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-granite);
+  color: var(--color-water-10);
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  font-size: small;
+  font-weight: 200;
+}
