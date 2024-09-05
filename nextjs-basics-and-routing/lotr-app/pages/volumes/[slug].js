@@ -6,14 +6,18 @@ import Link from "next/link";
 export default function VolumeDetail() {
   const router = useRouter();
   const { slug } = router.query;
-  const currentVolume = volumes.find((volume) => volume.slug === slug);
 
+  const currentVolume = volumes.find((volume) => volume.slug === slug);
   if (!currentVolume) {
     return null;
   }
-  const { title, description, cover, books } = volumes.find(
-    (volume) => volume.slug === slug
-  );
+
+  const currentIndex = volumes.findIndex((volume) => volume.slug === slug);
+  const nextVolume = volumes[currentIndex + 1];
+  const previousVolume = volumes[currentIndex - 1];
+
+  const { title, description, cover, books } = currentVolume;
+
   return (
     <>
       <Link href="../volumes">← All Volumes</Link>
@@ -24,30 +28,25 @@ export default function VolumeDetail() {
           return (
             <li key={ordinal}>
               <p>
-                {ordinal}: {title}
+                {ordinal}: <strong>{title}</strong>
               </p>
             </li>
           );
         })}
       </ul>
-      <Image src={cover} alt={title} width={140} height={230} />
-      <hr />
-      <Link href={"/volumes"}>← Previous Volume</Link>
-      <br />
-      <Link href={"/volumes"}>Next Volume →</Link>
+      <Image src={cover} alt={title} width={280} height={460} />
+      <div>
+        {previousVolume && (
+          <Link href={`/volumes/${previousVolume.slug}`}>
+            ← Previous: {previousVolume.title}
+          </Link>
+        )}
+        {nextVolume && (
+          <Link href={`/volumes/${nextVolume.slug}`}>
+            Next: {nextVolume.title} →
+          </Link>
+        )}
+      </div>
     </>
   );
 }
-
-// <footer
-//   style={{
-//     display: "flex",
-//     position: "fixed",
-//     bottom: 0,
-//     right: 0,
-//     padding: "1rem",
-//   }}
-// >
-//   <Link href={"/volumes"}>← Previous Volume</Link>
-//   <Link href={"/volumes"}>Next Volume →</Link>
-// </footer>
