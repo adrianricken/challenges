@@ -3,17 +3,18 @@ import { introduction } from "../../resources/lib/data";
 import { volumes } from "../../resources/lib/data";
 import { useRouter } from "next/router";
 
+function getRandomElement(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
 export default function Volumes() {
   const router = useRouter();
 
-  function getRandomElement(array) {
-    return array[Math.floor(Math.random() * array.length)];
-  }
-
-  function handleGetRandomVolume() {
+  const handleRandomElement = (event) => {
+    event.preventDefault();
     const randomVolume = getRandomElement(volumes);
     router.push(`/volumes/${randomVolume.slug}`);
-  }
+  };
 
   return (
     <>
@@ -28,7 +29,7 @@ export default function Volumes() {
           </li>
         ))}
       </ul>
-      <button onClick={handleGetRandomVolume}>Random volume</button>
+      <button onClick={handleRandomElement}>Random volume</button>
     </>
   );
 }

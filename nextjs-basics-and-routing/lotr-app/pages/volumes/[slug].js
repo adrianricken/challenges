@@ -29,14 +29,12 @@ export default function VolumeDetail() {
             </li>
           );
         })}
-        <li>
-          <Link href={"/volumes"}>← Previous Volume</Link>
-        </li>
-        <li>
-          <Link href={"/volumes"}>Next Volume →</Link>
-        </li>
       </ul>
       <Image src={cover} alt={title} width={140} height={230} />
+      <hr />
+      <Link href={"/volumes"}>← Previous Volume</Link>
+      <br />
+      <Link href={"/volumes"}>Next Volume →</Link>
     </>
   );
 }
