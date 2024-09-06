@@ -2,12 +2,18 @@ import { volumes } from "../../resources/lib/data";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
+import styled from "styled-components";
 
 export default function VolumeDetail() {
   const router = useRouter();
   const { slug } = router.query;
 
+  const StyledBackground = styled.div`
+    background-color: ${({ $color }) => $color};
+  `;
+
   const currentVolume = volumes.find((volume) => volume.slug === slug);
+
   if (!currentVolume) {
     return null;
   }
@@ -16,10 +22,10 @@ export default function VolumeDetail() {
   const nextVolume = volumes[currentIndex + 1];
   const previousVolume = volumes[currentIndex - 1];
 
-  const { title, description, cover, books } = currentVolume;
+  const { title, description, cover, books, color } = currentVolume;
 
   return (
-    <>
+    <StyledBackground $color={color}>
       <Link href="../volumes">← All Volumes</Link>
       <h1>{title}</h1>
       <p>{description}</p>
@@ -47,6 +53,6 @@ export default function VolumeDetail() {
           </Link>
         )}
       </div>
-    </>
+    </StyledBackground>
   );
 }
