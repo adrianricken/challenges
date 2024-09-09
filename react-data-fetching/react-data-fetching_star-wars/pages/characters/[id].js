@@ -1,42 +1,41 @@
-import { useRouter } from "next/router";
-import useSWR from "swr";
 import Card from "../../components/Card";
 import Layout from "../../components/Layout";
-
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+import useSWR from "swr";
+import { useRouter } from "next/router";
 
 export default function Character() {
   const router = useRouter();
   const { id } = router.query;
+  const URL = `https://swapi.py4e.com/api/people/${id}`;
 
-  if (!res.ok) {
-    const error = new Error("An error occurred while fetching the data.");
-    error.info = await res.json();
-    error.status = res.status;
-    throw error;
-  }
+  const fetcher = async (URL) => {
+    const res = await fetch(URL);
 
-  return res.json();
-};
+    if (!res.ok) {
+      const error = new Error("An error occurred while fetching the data.");
+      error.info = await res.json();
+      error.status = res.status;
+      throw error;
+    }
 
-  const { data, error, isLoading } = useSWR(
-    `https://swapi.py4e.com/api/people/${id}`,
-    fetcher
-  );
+    return res.json();
+  };
+
+  const { data, isLoading, error } = useSWR(URL, fetcher);
 
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
 
-  const { name, height, eye_color, birth_year } = data;
+  console.log(data);
 
   return (
     <Layout>
       <Card
         id={id}
-        name={name}
-        height={height}
-        eyeColor={eye_color}
-        birthYear={birth_year}
+        name={data.name ? data.name : "Unknown"}
+        height={data.height ? data.height : "Unknown"}
+        eyeColor={data.eye_color ? data.eye_color : "Unknown"}
+        birthYear={data.birth_year ? data.birth_year : "Unknown"}
       />
     </Layout>
   );
